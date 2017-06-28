@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <comment>Custom Resource</comment>
+    <entry key="browse">参照</entry>
+    <entry key="this.dirChooser.title">フォルダの選択</entry>
+</properties>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-<comment>SimpleApp Resource</comment>
-<entry key="title">SimpleApp サンプル#3</entry>
+    <comment>SimpleApp Resource</comment>
+    <entry key="title">SimpleApp サンプル#3</entry>
 
-<entry key="directory">ディレクトリ</entry>
-<entry key="namePattern">ファイル名パターン</entry>
-<entry key="includeSubDirs">サブディレクトリを含む</entry>
+    <entry key="directory">ディレクトリ</entry>
+    <entry key="namePattern">ファイル名パターン</entry>
+    <entry key="includeSubDirs">サブディレクトリを含む</entry>
 
-<entry key="ok">実行</entry>
-<entry key="cancel">キャンセル</entry>
+    <entry key="ok">実行</entry>
+    <entry key="cancel">キャンセル</entry>
 </properties>

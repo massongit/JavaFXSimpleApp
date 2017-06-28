@@ -1,5 +1,8 @@
 /SimpleApp6.jar
 /dist/
-*.jar
 .DS_Store
-
+.idea/
+JavaFXSimpleApp.iml
+bin/
+lib/
+out/

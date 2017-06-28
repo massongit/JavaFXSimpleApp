@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-<comment>Custom Resource</comment>
-<entry key="browse">BROWSE</entry>
-<entry key="dirChooser.title">Choose a directory</entry>
+    <comment>Custom Resource</comment>
+    <entry key="browse">BROWSE</entry>
+    <entry key="this.dirChooser.title">Choose a directory</entry>
 </properties>

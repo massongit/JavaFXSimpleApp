@@ -1,12 +1,13 @@
-# JavaFXSimpleApp [![Build Status](https://travis-ci.org/seraphy/JavaFXSimpleApp.svg)](https://travis-ci.org/seraphy/JavaFXSimpleApp) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+# JavaFXSimpleAppForKotlin [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
-JavaFX8で簡単なアプリケーションを簡単に作る方法のサンプル例
+JavaFX8で簡単なアプリケーションを簡単に作る方法のサンプル例 (Kotlinバージョン)
 
 ## 作者
-seraphy
+seraphy, Masaya SUZUKI
 
 ## URL
-https://github.com/seraphy/JavaFXSimpleApp
+https://github.com/massongit/javaFXSimpleApp  
+(forked from https://github.com/seraphy/JavaFXSimpleApp)
 
 ## 構成
 ### simpleapp0
@@ -37,16 +38,5 @@ cssを使ったスタイルシートの適用例です。
 
 直接、実行できます。
 
-### mdiapp1
-MacおよびWindows/Linuxでのマルチドキュメント(マルチStage)の実装例です。
-MacのCommand+Qの処理などが入っています。
-
-直接、実行できます。
-
 ### utils
 AlertダイアログとXMLリソースバンドルを定義しています。
-
-### build.xml
-simpleapp5をビルドして実行可能jarを生成するantビルドです。
-
-jdk8付属のjavapackager用antタスクの使用例にもなっています。

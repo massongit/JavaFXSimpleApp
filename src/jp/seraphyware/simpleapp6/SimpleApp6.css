@@ -1,32 +1,29 @@
-.root {
-}
-
 .contents {
-	-fx-background-color: #ffff80;
-	-fx-font-size: 12pt;
-	-fx-background-image: url("background-image.jpg");
-	-fx-background-repeat: stretch;
-	-fx-background-size: 800 400;
-	-fx-background-position: right bottom;
+    -fx-background-color: #ffff80;
+    -fx-font-size: 12pt;
+    -fx-background-image: url("background-image.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 800 400;
+    -fx-background-position: right bottom;
 }
 
 .button {
-	-fx-background-color: #8888ff;
-	-fx-text-fill: #ffff88;
-	-fx-background-insets: 2;
+    -fx-background-color: #8888ff;
+    -fx-text-fill: #ffff88;
+    -fx-background-insets: 2;
     -fx-background-radius: 10;
     -fx-padding: 3 20 3 20;
 }
 
 .text-field {
-	-fx-background-insets: 3;
-	-fx-background-color: #eeeeee;
+    -fx-background-insets: 3;
+    -fx-background-color: #eeeeee;
 }
 
 .label {
-	-fx-text-fill: black;
+    -fx-text-fill: black;
 }
 
 .button:hover {
-	-fx-background-color: #80f0ff;
+    -fx-background-color: #80f0ff;
 }

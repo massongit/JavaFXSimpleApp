@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-
-<BorderPane fx:id="root" focusTraversable="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.seraphyware.simpleapp6.DirTextFieldController">
-   <center>
-      <TextField fx:id="txtDir" BorderPane.alignment="CENTER">
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <BorderPane.margin>
-            <Insets right="5.0" />
-         </BorderPane.margin></TextField>
-   </center>
-   <right>
-      <Button onAction="#onBrowse" text="%browse" BorderPane.alignment="CENTER" />
-   </right>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane fx:id="root" focusTraversable="true" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.seraphyware.simpleapp6.DirTextFieldController">
+    <center>
+        <TextField fx:id="txtDir" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <BorderPane.margin>
+                <Insets right="5.0"/>
+            </BorderPane.margin>
+        </TextField>
+    </center>
+    <right>
+        <Button onAction="#onBrowse" text="%browse" BorderPane.alignment="CENTER"/>
+    </right>
 </BorderPane>

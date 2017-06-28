@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-<comment>SimpleApp Resource</comment>
-<entry key="title">SimpleApp Sample #5</entry>
-<entry key="dirChooser.title">Choose a folder</entry>
+    <comment>SimpleApp Resource</comment>
+    <entry key="title">SimpleApp Sample #5</entry>
+    <entry key="this.dirChooser.title">Choose a folder</entry>
 
-<entry key="directory">Directory</entry>
-<entry key="browse">Browse</entry>
-<entry key="namePattern">Name Pattern</entry>
-<entry key="includeSubDirs">Traverse also all sub-directories.</entry>
+    <entry key="directory">Directory</entry>
+    <entry key="browse">Browse</entry>
+    <entry key="namePattern">Name Pattern</entry>
+    <entry key="includeSubDirs">Traverse also all sub-directories.</entry>
 
-<entry key="ok">Run</entry>
-<entry key="cancel">Cancel</entry>
+    <entry key="ok">Run</entry>
+    <entry key="cancel">Cancel</entry>
 </properties>

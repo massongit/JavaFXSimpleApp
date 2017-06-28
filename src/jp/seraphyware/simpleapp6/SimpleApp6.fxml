@@ -5,7 +5,7 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.*?>
 <BorderPane fx:id="root" stylesheets="@SimpleApp6.css" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="jp.seraphyware.simpleapp6.SimpleApp6Controller">
     <top>
         <MenuBar>
             <useSystemMenuBar>true</useSystemMenuBar>
@@ -17,7 +17,7 @@
                 </MenuItem>
             </Menu>
             <Menu text="%command">
-                <MenuItem fx:id="menuitemOk" onAction="#onOK" text="%ok">
+                <MenuItem fx:id="menuItemOk" onAction="#onOK" text="%ok">
                     <accelerator>
                         <KeyCodeCombination alt="UP" code="E" control="UP" meta="UP" shift="UP" shortcut="DOWN"/>
                     </accelerator>
