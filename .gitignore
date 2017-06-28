@@ -6,3 +6,4 @@ JavaFXSimpleApp.iml
 bin/
 lib/
 out/
+.settings/
