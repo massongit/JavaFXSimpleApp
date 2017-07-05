@@ -17,10 +17,9 @@ class ErrorDialogUtils private constructor() {
             // jdk1.8u40から、Alertクラスによるダイアログがサポートされた.
             // 使い方は以下引用
             // http://code.makery.ch/blog/javafx-dialogs-official/
-            val alert = Alert(AlertType.ERROR).apply {
+            val alert = Alert(AlertType.ERROR, ex.message).apply {
                 title = "Exception Dialog"
                 headerText = ex::class.simpleName
-                contentText = ex.message
             }
 
             // Create expandable Exception.
