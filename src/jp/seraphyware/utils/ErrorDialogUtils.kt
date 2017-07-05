@@ -22,26 +22,29 @@ class ErrorDialogUtils private constructor() {
                 headerText = ex::class.simpleName
             }
 
-            // Create expandable Exception.
-            StringWriter().use {
-                PrintWriter(it).use {
-                    ex.printStackTrace(it)
-                }
-
-                alert.dialogPane.expandableContent = FXMLLoader(this::class.java.getResource("ErrorDialogExpandableContent.fxml")).apply {
-                    // FXMLで指定されたコントローラクラスをインスタンス化する.
-                    setControllerFactory {
-                        try {
-                            it.newInstance()
-                        } catch (ex: Exception) {
-                            throw RuntimeException(ex)
-                        }
+            // 詳細コンテンツをセット
+            alert.dialogPane.expandableContent = FXMLLoader(this::class.java.getResource("ErrorDialogExpandableContent.fxml")).apply {
+                // FXMLで指定されたコントローラクラスをインスタンス化する.
+                setControllerFactory {
+                    try {
+                        it.newInstance()
+                    } catch (ex: Exception) {
+                        throw RuntimeException(ex)
                     }
-                }.load<GridPane>().apply {
-                    (children[1] as TextArea).text = it.toString()
+                }
+            }.load<GridPane>().apply {
+                StringWriter().use { sw ->
+                    // スタックトレースを読み込む
+                    PrintWriter(sw).use {
+                        ex.printStackTrace(it)
+                    }
+
+                    // スタックトレースをセット
+                    (children[1] as TextArea).text = sw.toString()
                 }
             }
 
+            // エラーダイアログを表示
             alert.showAndWait()
         }
     }
