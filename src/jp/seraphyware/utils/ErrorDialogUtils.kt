@@ -1,10 +1,11 @@
 package jp.seraphyware.utils
 
-import javafx.fxml.FXMLLoader
 import javafx.scene.control.Alert
 import javafx.scene.control.Alert.AlertType
+import javafx.scene.control.Label
 import javafx.scene.control.TextArea
 import javafx.scene.layout.GridPane
+import javafx.scene.layout.Priority
 import java.io.PrintWriter
 import java.io.StringWriter
 
@@ -22,26 +23,28 @@ class ErrorDialogUtils private constructor() {
                 headerText = ex::class.simpleName
             }
 
-            // 詳細コンテンツをセット
-            alert.dialogPane.expandableContent = FXMLLoader(this::class.java.getResource("ErrorDialogExpandableContent.fxml")).apply {
-                // FXMLで指定されたコントローラクラスをインスタンス化する.
-                setControllerFactory {
-                    try {
-                        it.newInstance()
-                    } catch (ex: Exception) {
-                        throw RuntimeException(ex)
-                    }
-                }
-            }.load<GridPane>().apply {
-                StringWriter().use { sw ->
-                    // スタックトレースを読み込む
-                    PrintWriter(sw).use {
-                        ex.printStackTrace(it)
-                    }
+            // Create expandable Exception.
+            val sw = StringWriter()
 
-                    // スタックトレースをセット
-                    (children[1] as TextArea).text = sw.toString()
-                }
+            PrintWriter(sw).use {
+                ex.printStackTrace(it)
+            }
+
+            val textArea = TextArea(sw.toString()).apply {
+                isEditable = false
+                isWrapText = true
+                maxWidth = Double.MAX_VALUE
+                maxHeight = Double.MAX_VALUE
+            }
+
+            GridPane.setVgrow(textArea, Priority.ALWAYS)
+            GridPane.setHgrow(textArea, Priority.ALWAYS)
+
+            // Set expandable Exception into the dialog pane.
+            alert.dialogPane.expandableContent = GridPane().apply {
+                maxWidth = Double.MAX_VALUE
+                add(Label("The exception stacktrace was:"), 0, 0)
+                add(textArea, 0, 1)
             }
 
             // エラーダイアログを表示
